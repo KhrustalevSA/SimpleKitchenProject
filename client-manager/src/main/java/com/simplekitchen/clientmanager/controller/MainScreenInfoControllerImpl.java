@@ -14,6 +14,7 @@ public class MainScreenInfoControllerImpl implements MainScreenInfoController {
     @Override
     @GetMapping("/user")
     public User getUser(){
+        UserImpl user = new UserImpl();
         return UserImpl.builder().name("Ivan").surname("Ivanov").age(30L).sex("M").build();
     }
 
