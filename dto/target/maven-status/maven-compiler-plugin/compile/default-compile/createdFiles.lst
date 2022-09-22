@@ -1,0 +1,3 @@
+com\simplekitchen\dto\user\api\User.class
+com\simplekitchen\dto\user\UserImpl$UserImplBuilder.class
+com\simplekitchen\dto\user\UserImpl.class
