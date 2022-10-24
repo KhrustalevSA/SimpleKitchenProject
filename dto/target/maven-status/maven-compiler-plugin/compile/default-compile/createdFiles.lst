@@ -1,3 +1,10 @@
-com\simplekitchen\dto\user\api\User.class
+com\simplekitchen\dto\common\api\Status.class
+com\simplekitchen\dto\image\ImageImpl$ImageImplBuilder.class
+com\simplekitchen\dto\recipe\api\RecipeResponse.class
 com\simplekitchen\dto\user\UserImpl$UserImplBuilder.class
+com\simplekitchen\dto\common\StatusImpl$StatusImplBuilder.class
+com\simplekitchen\dto\common\StatusImpl.class
+com\simplekitchen\dto\image\ImageImpl.class
+com\simplekitchen\dto\user\api\User.class
 com\simplekitchen\dto\user\UserImpl.class
+com\simplekitchen\dto\recipe\api\RecipeRequest.class
