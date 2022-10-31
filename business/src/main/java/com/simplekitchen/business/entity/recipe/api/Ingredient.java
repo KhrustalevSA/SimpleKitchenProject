@@ -1,6 +1,6 @@
-package com.simplekitchen.dto.recipe.api;
+package com.simplekitchen.business.entity.recipe.api;
 
-import java.util.List;
+import com.simplekitchen.business.entity.recipe.RecipeImpl;
 
 /**
  * Интерфейс для сущности ингредиента
@@ -12,6 +12,7 @@ public interface Ingredient {
     /**
      * @return уникальный идентификатор рецепта
      */
+
     Long getUuid();
 
     /**
@@ -22,7 +23,7 @@ public interface Ingredient {
     /**
      * @return список рецептов где используется
      */
-    List<Recipe> getRecipeList();
+    RecipeImpl getRecipeList();
 
     /**
      * @return средний вес ингредиента

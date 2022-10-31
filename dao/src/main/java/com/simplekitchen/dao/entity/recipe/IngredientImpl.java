@@ -1,12 +1,12 @@
-package com.simplekitchen.dto.recipe;
+package com.simplekitchen.dao.entity.recipe;
 
-import com.simplekitchen.dto.recipe.api.Ingredient;
-import com.simplekitchen.dto.recipe.api.Recipe;
+import com.simplekitchen.dao.entity.recipe.api.Ingredient;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -19,35 +19,40 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class IngredientImpl implements Ingredient {
-
-    /**
-     *  уникальный идентификатор рецепта
-     */
-    Long uuid;
+    @Id
+    @Column(name = "uuid", nullable = false)
+    private Long uuid;
 
     /**
      *  название ингредиента
      */
+    @Column(name = "name")
     String name;
 
     /**
      *  список рецептов где используется
      */
-    List<Recipe> recipeList;
+    @ManyToMany(fetch = FetchType.EAGER, mappedBy= "ingredientsList")
+    List<RecipeImpl> recipeList;
 
     /**
      *  средний вес ингредиента
      */
+    @Column(name = "weight")
     Long averageWeight;
 
     /**
      *  срок годности ингредиента
      */
+    @Column(name = "expirationDate")
     Long expirationDate;
 
     /**
      *  срок годности ингредиента в холодильнике
      */
+    @Column(name = "expirationDateInFridge")
     Long expirationDateInFridge;
+
 }

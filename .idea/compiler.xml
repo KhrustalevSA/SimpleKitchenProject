@@ -10,6 +10,7 @@
         <module name="client-manager" />
         <module name="dao" />
         <module name="application" />
+        <module name="business" />
         <module name="dto" />
       </profile>
     </annotationProcessing>
@@ -20,6 +21,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="application" options="-parameters" />
+      <module name="business" options="-parameters" />
       <module name="client-manager" options="-parameters" />
       <module name="dao" options="-parameters" />
       <module name="dto" options="-parameters" />

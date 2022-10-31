@@ -21,11 +21,14 @@
         <module>dto</module>
         <module>application</module>
         <module>dao</module>
+        <module>business</module>
     </modules>
 
+    <!-- dependency management -->
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <lombok.version>1.18.22</lombok.version>
     </properties>
 
     <build>
@@ -45,6 +48,12 @@
     </build>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.1</version>
+        </dependency>
 
         <dependency>
             <groupId>org.hibernate</groupId>

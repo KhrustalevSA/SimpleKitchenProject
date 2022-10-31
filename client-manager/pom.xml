@@ -18,12 +18,17 @@
 
 
     <dependencies>
-
         <dependency>
-            <groupId>com.simplekitchen.dao</groupId>
-            <artifactId>dao</artifactId>
+            <groupId>com.simplekitchen.dto</groupId>
+            <artifactId>dto</artifactId>
             <version>1.0.0-SNAPSHOT</version>
             <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.simplekitchen.business</groupId>
+            <artifactId>business</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
 
     </dependencies>

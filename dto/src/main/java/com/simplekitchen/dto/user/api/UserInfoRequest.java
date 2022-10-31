@@ -10,4 +10,6 @@ public interface UserInfoRequest {
      * @return имя пользователя
      */
     String getName();
+
+
 }

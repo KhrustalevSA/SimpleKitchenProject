@@ -2,11 +2,16 @@ package com.simplekitchen.clientmanager.controller;
 
 import com.simplekitchen.clientmanager.controller.api.RecipeController;
 import com.simplekitchen.clientmanager.controller.api.UserController;
+import com.simplekitchen.clientmanager.service.api.UserControllerService;
 import com.simplekitchen.dto.common.StatusImpl;
 import com.simplekitchen.dto.user.*;
 import com.simplekitchen.dto.user.api.User;
+import com.simplekitchen.dto.user.api.UserInfoRequest;
 import com.simplekitchen.dto.user.api.UserInfoResponse;
 import com.simplekitchen.dto.user.api.UserList;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -19,31 +24,32 @@ import java.util.Date;
  */
 @RestController
 @RequestMapping("/user")
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserControllerImpl implements UserController {
+
+    @Autowired
+    private UserControllerService userControllerService;
 
     /**
      * @return список найденных пользователей с их полной информацией
      */
     @PostMapping("/find")
     public UserInfoResponse find(@RequestParam(name = "userInfo") UserInfoRequestImpl userInfoRequest) {
+        //Валидация
         if (userInfoRequest == null) {
             return UserInfoResponseImpl.builder()
                     .status(StatusImpl.builder()
                             .success(false).description("must not null").build()).build();
         }
-        User user = UserImpl.builder()
-                .name("Ivan").surname("Ivanov").patronymic("Ivanovich").sex("M").birthDate(new Date(1998, 05, 23))
-                .city(CityImpl.builder()
-                        .cityName("Vologda").regionName("Vologodskaya obl").streetName("Gor val")
-                        .houseNumber(26L).entranceNumber(1L).flatNumber(112L).build()).build();
-        UserList userList = new UserListImpl();
-        userList.getUserList().add(user);
-        return UserInfoResponseImpl.builder().status(StatusImpl.builder().success(false).build()).userList(userList).build();
+        //Передача управления сервису контроллера
+
+        return userControllerService.find(userInfoRequest);
 
     }
 
     //@PostMapping("/registration")
-    //public registrationResponse registrate(@RequestParam registrationRequest ){
+    //public registrationResponse registration(@RequestParam registrationRequest ){
 
     //}
 
