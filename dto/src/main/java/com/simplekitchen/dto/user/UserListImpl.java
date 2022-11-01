@@ -23,4 +23,8 @@ public class UserListImpl implements UserList {
      * список пользователей
      */
     private List<User> userList;
+
+    public List<User> getUserList() {
+        return userList;
+    }
 }

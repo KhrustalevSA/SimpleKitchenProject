@@ -28,4 +28,11 @@ public class RecipeRequestImpl implements RecipeRequest {
      */
     private String name;
 
+    public String getUuid() {
+        return uuid;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

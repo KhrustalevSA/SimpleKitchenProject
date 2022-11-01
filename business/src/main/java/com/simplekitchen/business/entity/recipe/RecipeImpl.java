@@ -1,6 +1,7 @@
 package com.simplekitchen.business.entity.recipe;
 
 import com.simplekitchen.business.entity.image.api.Image;
+import com.simplekitchen.business.entity.recipe.api.Ingredient;
 import com.simplekitchen.business.entity.recipe.api.Recipe;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -36,7 +37,7 @@ public class RecipeImpl implements Recipe {
     /**
      * поле списка используемых в рецепте ингредиентов
      */
-    private List<IngredientImpl> ingredientsList;
+    private List<Ingredient> ingredientsList;
 
     /**
      * поле описания рецепта

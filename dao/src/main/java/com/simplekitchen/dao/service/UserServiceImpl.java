@@ -8,16 +8,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
-import java.util.logging.Logger;
 
 @Slf4j
 @AllArgsConstructor
 public class UserServiceImpl implements UserService {
 
+    @Autowired
     private final UserRepository repository;
 
 

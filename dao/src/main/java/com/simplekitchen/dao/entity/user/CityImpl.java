@@ -1,10 +1,13 @@
 package com.simplekitchen.dao.entity.user;
 
-import com.simplekitchen.dto.user.api.City;
+import com.simplekitchen.dao.entity.user.api.City;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+import java.util.List;
 
 /**
  * Класс реализовывающий интерфейс City
@@ -16,40 +19,54 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@Table
 public class CityImpl implements City {
 
     /**
      * поле уникального идентификатора города пользователя
      */
+    @Id
+    @Column(name = "id", nullable = false)
     private Long uuid;
 
     /**
      * поле имени города
      * */
-    String cityName;
+    @Column(name = "town")
+    private String cityName;
 
     /**
      * поле имени области
      * */
-    String regionName;
+    @Column(name = "region")
+    private String regionName;
 
     /**
      * поле названия улицы
      * */
-    String streetName;
+    @Column(name = "street")
+    private String streetName;
 
     /**
      * поле номера дома
      * */
-    Long houseNumber;
+    @Column(name = "house")
+    private Long houseNumber;
 
     /**
      * поле номера подъезда
      * */
-    Long entranceNumber;
+    @Column(name = "entrance")
+    private Long entranceNumber;
 
     /**
      * поле номера квартиры
      * */
-    Long flatNumber;
+    @Column(name = "flat")
+    private Long flatNumber;
+
+    @OneToMany(mappedBy = "city")
+    private List<UserImpl> userList;
+
 }

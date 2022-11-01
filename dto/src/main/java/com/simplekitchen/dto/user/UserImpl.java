@@ -63,4 +63,35 @@ public class UserImpl implements User {
      */
     private City city;
 
+    public Long getUuid() {
+        return uuid;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getPatronymic() {
+        return patronymic;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public List<Recipe> getFavoriteRecipeList() {
+        return favoriteRecipeList;
+    }
+
+    public City getCity() {
+        return city;
+    }
 }

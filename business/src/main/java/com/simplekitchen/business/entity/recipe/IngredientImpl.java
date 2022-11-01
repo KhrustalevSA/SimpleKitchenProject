@@ -1,6 +1,7 @@
 package com.simplekitchen.business.entity.recipe;
 
 import com.simplekitchen.business.entity.recipe.api.Ingredient;
+import com.simplekitchen.business.entity.recipe.api.Recipe;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -35,7 +36,7 @@ public class IngredientImpl implements Ingredient {
      *  список рецептов где используется
      */
     @ManyToMany(fetch = FetchType.EAGER, mappedBy= "ingredientsList")
-    List<RecipeImpl> recipeList;
+    List<Recipe> recipeList;
 
     /**
      *  средний вес ингредиента

@@ -2,7 +2,6 @@ package com.simplekitchen.dao.entity.user;
 
 import com.simplekitchen.dao.entity.recipe.RecipeImpl;
 import com.simplekitchen.dao.entity.user.api.User;
-import com.simplekitchen.dto.user.api.City;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -65,23 +64,17 @@ public class UserImpl implements User {
     /**
      * поле хранит список избранных рецептов пользователя
      */
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "favoriteRecipe")
+    @OneToMany(mappedBy = "user")
     private List<RecipeImpl> favoriteRecipeList;
 
     /**
      * поле хранит место жительства пользователя
      */
-    private City city;
+    @ManyToOne
+    private CityImpl city;
 
     @ManyToOne
     @JoinColumn(name="userList_id", nullable=false)
     private UserListImpl userList;
 
-    public Long getUuid() {
-        return uuid;
-    }
-
-    public void setUuid(Long uuid) {
-        this.uuid = uuid;
-    }
 }

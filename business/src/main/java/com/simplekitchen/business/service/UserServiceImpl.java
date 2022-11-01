@@ -5,6 +5,7 @@ import com.simplekitchen.business.mapper.api.UserMapper;
 import com.simplekitchen.business.service.api.UserService;
 import lombok.AllArgsConstructor;
 import org.apache.commons.collections4.CollectionUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

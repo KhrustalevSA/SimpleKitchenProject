@@ -2,6 +2,8 @@ package com.simplekitchen.business.entity.recipe.api;
 
 import com.simplekitchen.business.entity.recipe.RecipeImpl;
 
+import java.util.List;
+
 /**
  * Интерфейс для сущности ингредиента
  * @author KhrustalevSA
@@ -23,7 +25,7 @@ public interface Ingredient {
     /**
      * @return список рецептов где используется
      */
-    RecipeImpl getRecipeList();
+    List<Recipe> getRecipeList();
 
     /**
      * @return средний вес ингредиента

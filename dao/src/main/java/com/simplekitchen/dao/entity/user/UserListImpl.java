@@ -1,7 +1,6 @@
 package com.simplekitchen.dao.entity.user;
 
-import com.simplekitchen.dto.user.api.User;
-import com.simplekitchen.dto.user.api.UserList;
+import com.simplekitchen.dao.entity.user.api.UserList;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -30,7 +29,7 @@ public class UserListImpl implements UserList {
      * список пользователей
      */
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "userList")
-    private List<User> userList;
+    private List<UserImpl> userList;
 
     public Long getUuid() {
         return uuid;

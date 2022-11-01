@@ -8,9 +8,9 @@ import org.springframework.context.annotation.Bean;
 public class Configuration {
 
     @Bean
-    public UserService getUserService() {
+    public UserService getUserService(com.simplekitchen.dao.service.api.UserService userService) {
 
-        return new UserServiceImpl();
+        return new UserServiceImpl(userService);
     }
 
 }

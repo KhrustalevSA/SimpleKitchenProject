@@ -2,6 +2,8 @@ package com.simplekitchen.dao.entity.recipe;
 
 import com.simplekitchen.dao.entity.image.ImageImpl;
 import com.simplekitchen.dao.entity.recipe.api.Recipe;
+import com.simplekitchen.dao.entity.user.UserImpl;
+import com.simplekitchen.dao.entity.user.api.User;
 import lombok.*;
 import org.hibernate.Hibernate;
 
@@ -52,17 +54,20 @@ public class RecipeImpl implements Recipe {
     @Column(name = "description")
     private String description;
 
+    @ManyToOne
+    private UserImpl user;
+
     /**
      * поле списка изображений на странице рецептов
      */
     @OneToMany(mappedBy = "recipe")
     private List<ImageImpl> imagesList;
 
-    /**
-     * список описаний правильности действий на шагах готовки
-     */
-    @OneToMany()
-    private List<String> stepsDescription;
+    // /**
+    //  * список описаний правильности действий на шагах готовки
+    //  */
+    // @OneToMany()
+    //private List<String> stepsDescription;
 
     /**
      * время готовки рецепта
@@ -88,16 +93,4 @@ public class RecipeImpl implements Recipe {
     @Column(name = "difficulty")
     private String difficulty;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        RecipeImpl recipe = (RecipeImpl) o;
-        return uuid != null && Objects.equals(uuid, recipe.uuid);
-    }
-
-    @Override
-    public int hashCode() {
-        return getClass().hashCode();
-    }
 }

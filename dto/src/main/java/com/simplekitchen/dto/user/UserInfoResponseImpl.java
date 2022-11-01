@@ -29,4 +29,12 @@ public class UserInfoResponseImpl implements UserInfoResponse {
      * поле списка пользователей
      */
     private UserList userList;
+
+    public StatusImpl getStatus() {
+        return status;
+    }
+
+    public UserList getUserList() {
+        return userList;
+    }
 }

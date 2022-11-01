@@ -71,5 +71,43 @@ public class RecipeImpl implements Recipe {
 
     private String difficulty;
 
+    public String getUuid() {
+        return uuid;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public List<Ingredient> getIngredients() {
+        return ingredients;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public List<Image> getImagesList() {
+        return imagesList;
+    }
+
+    public List<String> getStepDescription() {
+        return stepDescription;
+    }
+
+    public Long getCookingTime() {
+        return cookingTime;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public Date getPublishDate() {
+        return publishDate;
+    }
+
+    public String getDifficulty() {
+        return difficulty;
+    }
 }

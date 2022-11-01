@@ -1,6 +1,7 @@
 package com.simplekitchen.business.entity.user;
 
 import com.simplekitchen.business.entity.recipe.RecipeImpl;
+import com.simplekitchen.business.entity.recipe.api.Recipe;
 import com.simplekitchen.business.entity.user.api.User;
 import com.simplekitchen.business.entity.user.api.UserName;
 import lombok.AllArgsConstructor;
@@ -28,7 +29,7 @@ public class UserImpl implements User {
      */
     private Long uuid;
 
-    private UserNameImpl userName;
+    private UserName userName;
 
     /**
      * поле возраста пользователя
@@ -43,7 +44,7 @@ public class UserImpl implements User {
     /**
      * поле хранит список избранных рецептов пользователя
      */
-    private List<RecipeImpl> favoriteRecipeList;
+    private List<Recipe> favoriteRecipeList;
 
     /**
      * поле хранит место жительства пользователя

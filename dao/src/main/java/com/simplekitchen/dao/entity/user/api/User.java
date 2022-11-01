@@ -1,7 +1,9 @@
 package com.simplekitchen.dao.entity.user.api;
 
-import com.simplekitchen.dto.recipe.api.Recipe;
-import com.simplekitchen.dto.user.api.City;
+
+
+import com.simplekitchen.dao.entity.recipe.RecipeImpl;
+import com.simplekitchen.dao.entity.recipe.api.Recipe;
 
 import java.util.Date;
 import java.util.List;
@@ -40,7 +42,7 @@ public interface User {
     /**
      * Метод для получения списка любимых рецептов пользователя
      * */
-    List<Recipe> getFavoriteRecipeList();
+    List<RecipeImpl> getFavoriteRecipeList();
 
     /**
      * Метод для получения места жительства пользователя

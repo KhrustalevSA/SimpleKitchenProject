@@ -34,7 +34,6 @@
     <build>
         <plugins>
             <!-- <profiles>, <build> почитать, написать сборщик поставить PostMan, push in branch feature -->
-
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -43,7 +42,6 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 
@@ -53,6 +51,7 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-collections4</artifactId>
             <version>4.1</version>
+            <scope>compile</scope>
         </dependency>
 
         <dependency>
@@ -100,5 +99,6 @@
         </dependency>
 
     </dependencies>
+
 
 </project>

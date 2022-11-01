@@ -24,30 +24,54 @@ public class IngredientImpl implements Ingredient {
     /**
      *  уникальный идентификатор рецепта
      */
-    Long uuid;
+    private Long uuid;
 
     /**
      *  название ингредиента
      */
-    String name;
+    private String name;
 
     /**
      *  список рецептов где используется
      */
-    List<Recipe> recipeList;
+    private List<Recipe> recipeList;
 
     /**
      *  средний вес ингредиента
      */
-    Long averageWeight;
+    private Long averageWeight;
 
     /**
      *  срок годности ингредиента
      */
-    Long expirationDate;
+    private Long expirationDate;
 
     /**
      *  срок годности ингредиента в холодильнике
      */
-    Long expirationDateInFridge;
+    private Long expirationDateInFridge;
+
+    public Long getUuid() {
+        return uuid;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<Recipe> getRecipeList() {
+        return recipeList;
+    }
+
+    public Long getAverageWeight() {
+        return averageWeight;
+    }
+
+    public Long getExpirationDate() {
+        return expirationDate;
+    }
+
+    public Long getExpirationDateInFridge() {
+        return expirationDateInFridge;
+    }
 }

@@ -32,4 +32,11 @@ public class RecipeResponseImpl implements RecipeResponse {
      */
     private RecipeList recipeList;
 
+    public StatusImpl getStatus() {
+        return status;
+    }
+
+    public RecipeList getRecipeList() {
+        return recipeList;
+    }
 }

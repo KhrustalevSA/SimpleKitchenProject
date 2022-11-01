@@ -1,2 +1,9 @@
 com\simplekitchen\clientmanager\controller\api\MainScreenInfoController.class
+com\simplekitchen\clientmanager\controller\api\RecipeController.class
+com\simplekitchen\clientmanager\controller\UserControllerImpl.class
+com\simplekitchen\clientmanager\service\api\UserControllerService.class
+com\simplekitchen\clientmanager\controller\RecipeControllerImpl.class
+com\simplekitchen\clientmanager\config\Configuration.class
 com\simplekitchen\clientmanager\controller\MainScreenInfoControllerImpl.class
+com\simplekitchen\clientmanager\service\UserControllerServiceImpl.class
+com\simplekitchen\clientmanager\controller\api\UserController.class

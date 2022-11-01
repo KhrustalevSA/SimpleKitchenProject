@@ -1,6 +1,8 @@
 package com.simplekitchen.dao.entity.recipe.api;
 
+import com.simplekitchen.dao.entity.image.ImageImpl;
 import com.simplekitchen.dao.entity.image.api.Image;
+import com.simplekitchen.dao.entity.recipe.IngredientImpl;
 
 import java.util.Date;
 import java.util.List;
@@ -26,7 +28,7 @@ public interface Recipe {
     /**
      * @return список нужных ингредиентов для приготовления
      */
-    List<Ingredient> getIngredientsList();
+    List<IngredientImpl> getIngredientsList();
 
     /**
      * @return описание рецепта
@@ -36,7 +38,7 @@ public interface Recipe {
     /**
      * @return список изображений на странице рецепта
      */
-    List<Image> getImagesList();
+    List<ImageImpl> getImagesList();
 
     /**
      * @return время готовки рецепта
@@ -61,7 +63,7 @@ public interface Recipe {
     /**
      * @return список описаний правильности действий на шагах готовки
      */
-    List<String> getStepsDescription();
+    //List<String> getStepsDescription();
 
     String getDifficulty();
 

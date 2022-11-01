@@ -1,5 +1,6 @@
 package com.simplekitchen.dto.common;
 
+
 import com.simplekitchen.dto.common.api.Status;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,4 +29,13 @@ public class StatusImpl implements Status {
      */
     private String description;
 
+    @Override
+    public String getDescription() {
+        return description;
+    }
+
+    @Override
+    public boolean isSuccess() {
+        return success;
+    }
 }

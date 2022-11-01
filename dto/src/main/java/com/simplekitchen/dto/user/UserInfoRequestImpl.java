@@ -26,4 +26,12 @@ public class UserInfoRequestImpl implements UserInfoRequest {
      * @return имя пользователя
      */
     private String name;
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

@@ -31,4 +31,16 @@ public class ImageImpl implements Image {
      * поле для хранения url к картинке
      */
     private String url;
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public String getUrl() {
+        return url;
+    }
 }

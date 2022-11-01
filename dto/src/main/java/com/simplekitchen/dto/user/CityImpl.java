@@ -26,30 +26,58 @@ public class CityImpl implements City {
     /**
      * поле имени города
      * */
-    String cityName;
+    private String cityName;
 
     /**
      * поле имени области
      * */
-    String regionName;
+    private String regionName;
 
     /**
      * поле названия улицы
      * */
-    String streetName;
+    private String streetName;
 
     /**
      * поле номера дома
      * */
-    Long houseNumber;
+    private Long houseNumber;
 
     /**
      * поле номера подъезда
      * */
-    Long entranceNumber;
+    private Long entranceNumber;
 
     /**
      * поле номера квартиры
      * */
-    Long flatNumber;
+    private Long flatNumber;
+
+    public Long getUuid() {
+        return uuid;
+    }
+
+    public String getCityName() {
+        return cityName;
+    }
+
+    public String getRegionName() {
+        return regionName;
+    }
+
+    public String getStreetName() {
+        return streetName;
+    }
+
+    public Long getHouseNumber() {
+        return houseNumber;
+    }
+
+    public Long getEntranceNumber() {
+        return entranceNumber;
+    }
+
+    public Long getFlatNumber() {
+        return flatNumber;
+    }
 }

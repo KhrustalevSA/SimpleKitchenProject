@@ -2,6 +2,8 @@ package com.simplekitchen.dao.entity.recipe.api;
 
 import com.simplekitchen.dao.entity.recipe.RecipeImpl;
 
+import java.util.List;
+
 /**
  * Интерфейс для сущности ингредиента
  * @author KhrustalevSA
@@ -23,7 +25,7 @@ public interface Ingredient {
     /**
      * @return список рецептов где используется
      */
-    RecipeImpl getRecipeList();
+    List<RecipeImpl> getRecipeList();
 
     /**
      * @return средний вес ингредиента

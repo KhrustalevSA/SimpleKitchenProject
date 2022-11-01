@@ -1,5 +1,6 @@
 package com.simplekitchen.dao.config;
 
+import com.simplekitchen.dao.repository.UserRepository;
 import com.simplekitchen.dao.service.UserServiceImpl;
 import com.simplekitchen.dao.service.api.UserService;
 import org.springframework.context.annotation.Bean;
@@ -8,8 +9,8 @@ import org.springframework.context.annotation.Bean;
 public class ConfigurationDao {
 
     @Bean
-    public UserService getUserService() {
+    public UserService getUserService(UserRepository repository) {
 
-        return new UserServiceImpl();
+        return new UserServiceImpl(repository);
     }
 }

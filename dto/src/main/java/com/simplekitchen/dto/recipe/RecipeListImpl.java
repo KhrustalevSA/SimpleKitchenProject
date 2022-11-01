@@ -23,4 +23,8 @@ public class RecipeListImpl implements RecipeList {
      * список рецептов
      */
     private List<Recipe> recipeList;
+
+    public List<Recipe> getRecipeList() {
+        return recipeList;
+    }
 }
